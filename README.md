@@ -301,13 +301,13 @@ model Note {
 ## 🚀 Deployment
 
 ### Backend Deployment
-- **Platform**: [To be added]
-- **Live URL**: [To be added]
-- **Database**: PostgreSQL (Production)
+- **Platform**: Render
+- **Live URL**: https://notevault-k83t.onrender.com/api
+- **Database**: Postgresql and Prisma via neon Db.
 
 ### Frontend Deployment
-- **Platform**: [To be added]
-- **Live URL**: [To be added]
+- **Platform**: Netlify
+- **Live URL**: https://note-vault-project.netlify.app/
 - **Build**: Vite optimized production build
 
 ---
@@ -395,11 +395,5 @@ notes-project/
 
 ---
 
-## 📞 Support
-
-For setup issues or questions, refer to:
-1. **Backend Setup**: `backend/README.md`
-2. **Frontend Setup**: `frontend/README.md`
-3. **Testing**: `TESTS_README.md`
-4. **API Documentation**: Check backend README for endpoint details
+**API Documentation**: Check backend README for endpoint details
 
