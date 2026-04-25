@@ -1,4 +1,4 @@
-# Notes Management Application - Project Overview
+# NoteVault (Notes Management Application) - Project Overview
 
 ## 🎯 Objective
 
