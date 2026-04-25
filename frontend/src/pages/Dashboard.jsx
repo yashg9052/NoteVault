@@ -8,7 +8,7 @@ import NoteModal from "../components/NoteModal";
 import TransferModal from "../components/TransferModal";
 import NoteDetailModal from "../components/NoteDetailModal";
 import ThemeToggle from "../components/ThemeToggle";
-import MobileSidebar from "../components/MobileSidebar";
+import MobileSidebar from "../components/MobileSideBar"
 import Footer from "../components/Footer";
 import api from "../api/axios";
 
