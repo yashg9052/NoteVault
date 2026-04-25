@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+
+  notes            Note[]
+  transfersSent     NoteTransfer[] @relation("TransferSent")
+  transfersReceived NoteTransfer[] @relation("TransferReceived")
+}
+
+model Note {
+  id        String   @id @default(cuid())
+  title     String
+  content   String
+  category  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  owner   User   @relation(fields: [ownerId], references: [id])
+  ownerId String
+
+  transfers NoteTransfer[]
+}
+
+model NoteTransfer {
+  id         String   @id @default(cuid())
+  createdAt  DateTime @default(now())
+
+  note   Note   @relation(fields: [noteId], references: [id])
+  noteId String
+
+  fromUser   User   @relation("TransferSent", fields: [fromUserId], references: [id])
+  fromUserId String
+
+  toUser   User   @relation("TransferReceived", fields: [toUserId], references: [id])
+  toUserId String
+}
