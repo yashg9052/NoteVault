@@ -36,7 +36,7 @@ model NoteTransfer {
   id         String   @id @default(cuid())
   createdAt  DateTime @default(now())
 
-  note   Note   @relation(fields: [noteId], references: [id])
+  note   Note   @relation(fields: [noteId], references: [id], onDelete: Cascade)
   noteId String
 
   fromUser   User   @relation("TransferSent", fields: [fromUserId], references: [id])
